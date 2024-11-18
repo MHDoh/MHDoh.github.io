@@ -1,0 +1,43 @@
+/* variables.css */
+
+:root {
+    --background-color: #ffffff;
+    --toggle-button-color: #1b1f27;
+
+
+    --text-color: #000000;
+    --link-color: #1772d0;
+    --link-hover-color: #e88d2f;
+
+    --navbar-link-color: rgb(78, 78, 78);
+    --navbar-hover-link-color: #1772d0;
+    --navbar-active-link-color: #000000;
+
+    --h1-color: rgb(12, 12, 12);
+    
+    --border-color: #e88d2f;
+    --image-shadow-color: rgba(0, 0, 0, 0.2);
+    --span-color: #ffffd0;
+
+    --box-shadow: #1b1f274b;
+}
+
+body.dark-mode {
+    --background-color: #1b1f27;
+    --toggle-button-color: #ffffff;
+
+    --text-color: #ffffff;
+    --link-color: #e88d2f;
+    --link-hover-color: #1772d0;
+
+    --navbar-link-color: rgb(201, 201, 201);;
+    --navbar-hover-link-color: #1772d0;
+    --navbar-active-link-color: rgb(241, 241, 241);;
+
+    --h1-color: rgb(241, 241, 241);
+
+    --border-color: #000000;
+    --image-shadow-color: rgba(255, 255, 255, 0.2);
+
+    --box-shadow: #e88d2f;
+}
