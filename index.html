@@ -13,32 +13,24 @@
    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
    <!-- AOS Library for Animations -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-   <!-- Dark Mode Script -->
-   <script>
-      function toggleDarkMode() {
-         document.body.classList.toggle('dark-mode');
-         localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-         var img = document.getElementById('toggle-icon');
-         img.src = document.body.classList.contains('dark-mode') ? 'assets/images/mode-light.png' : 'assets/images/mode-dark.png';
-         img.alt = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-         if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-            var img = document.getElementById('toggle-icon');
-            img.src = 'assets/images/mode-light.png';
-            img.alt = 'Light Mode';
-         }
-         // Initialize AOS
-         AOS.init({
-            duration: 800,
-            once: true,
-         });
-      });
-   </script>
-</head>
-
+   <!-- JSON-LD Structured Data -->
+   <script type="application/ld+json">
+   {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammad Hussain",
+      "url": "https://mhdoh.github.io/",
+      "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Bilkent University"
+      },
+      "jobTitle": "Electrical and Electronics Engineering Student",
+      "knowsAbout": ["AI", "Machine Learning", "Signal Processing", "Telecommunications"],
+      "sameAs": [
+         "https://www.linkedin.com/in/mohammad-hussain1/",
+         "https://github.com/MHDoh"
+      ]
+   }
 
 
    <!-- Header Section -->
