@@ -1,529 +1,324 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta charset="UTF-8">
    <title>Mohammad Hussain</title>
    <meta name="author" content="Mohammad Hussain">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-   <link rel="icon" type="image/png" href="assets/images/icon.ico">
+   <!-- External CSS and Fonts -->
+   <link rel="stylesheet" href="stylesheet.css">
+   <link rel="icon" type="image/png" href="assets/images/favicon.ico">
    <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&amp;display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+   <!-- AOS Library for Animations -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+   <!-- Dark Mode Script -->
    <script>
       function toggleDarkMode() {
          document.body.classList.toggle('dark-mode');
          localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-
-         var img = document.querySelector('.dark-mode-toggle .toggle-icon');
-         if (document.body.classList.contains('dark-mode')) {
-            img.src = 'assets/images/mode-light.png';
-         } else {
-            img.src = 'assets/images/mode-dark.png';
-         }
+         var img = document.getElementById('toggle-icon');
+         img.src = document.body.classList.contains('dark-mode') ? 'assets/images/mode-light.png' : 'assets/images/mode-dark.png';
+         img.alt = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
       }
 
       document.addEventListener('DOMContentLoaded', () => {
          if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark-mode');
+            var img = document.getElementById('toggle-icon');
+            img.src = 'assets/images/mode-light.png';
+            img.alt = 'Light Mode';
          }
+         // Initialize AOS
+         AOS.init({
+            duration: 800,
+            once: true,
+         });
       });
    </script>
 </head>
 
-<body>
-   <!-- SPLASH SCREEN -->
-   <div id="splash-screen">
-      <table>
-         <tr>
-            <td>
-               <p align="center">
-                  <img src="assets/images/icon.ico" alt="Splash Screen">
-               </p>
-            </td>
-         </tr>
-         <tr>
-            <td>
-               <p align="center">
-                  &nbsp;
-               </p>
-               <p align="center">
-                  <strong>
-                     <name>Mohammad<br>Hussain</name>
-                  </strong>
-               </p>
-            </td>
-         </tr>
-      </table>
-
-   </div>
 
 
-   <!-- MAIN BODY -->
-   <table align="center">
-      <tbody>
-         <tr style="padding:0px">
-            <td style="padding-bottom: 5%;">
-               <!-- HEADER -->
-               <table>
-                  <tbody>
-                     <tr style="padding:0px">
-                        <td class="cell-header">
-                           <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-                              <img class="toggle-icon" src="assets/images/mode-dark.png" alt="Dark Mode"
-                                 class="mode-icon">
-                           </button>
+   <!-- Header Section -->
+   <header>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+         <img id="toggle-icon" src="assets/images/mode-dark.png" alt="Dark Mode">
+      </button>
+      <h1 data-aos="fade-down">Mohammad Hussain</h1>
+      <p class="subtitle" data-aos="fade-up">Electrical and Electronics Engineering Student at Bilkent University</p>
+      <nav>
+         <ul class="social-links" data-aos="fade-up" data-aos-delay="200">
+            <li><a href="mailto:hussainm13579@gmail.com">Email</a></li>
+            <li><a href="https://drive.google.com/file/d/1Pn6n54TRUTi4k0LPH7cgIIovIDZEE9r0/view?usp=sharing" target="_blank">CV</a></li>
+            <li><a href="https://github.com/MHDoh" target="_blank">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/mohammad-hussain1/" target="_blank">LinkedIn</a></li>
+         </ul>
+      </nav>
+   </header>
 
-                           <h1 data-value="Mohammad Hussain">Mohammad Hussain</h1>
-                           <p style="text-align:center; font-size: 18px;">
-                              <!-- <strong><name>Mohammad Hussain</name></strong> -->
-                              <!-- <br><br> -->
-                              <span><i>"The best scientist is open to experience and begins with romance -- the idea that anything is possible."</i>~ Ray Bradbury </span>
-                           </p>
-                           <!-- <p style="text-align:center"><a class="disabled" href="#">Bio</a>&nbsp;|&nbsp;<a href="mailto:mshayanalwaha@gmail.com">Email</a>&nbsp;|&nbsp;<a href="https://docs.google.com/document/d/1p9cThLEWSdVM1pfoJ0fYriDcyYJp91SF_DuYkOeY4Us/edit?usp=sharing" target="_blank">CV</a>&nbsp;|&nbsp;<a href="https://github.com/SCORPIA2004" target="_blank">Github</a>&nbsp;|&nbsp;<a href="https://www.linkedin.com/in/muhammed-shayan-usman/" target="_blank">LinkedIn</a>&nbsp;|&nbsp;<a href="https://www.instagram.com/scorpia2004/" target="_blank">Instagram</a>&nbsp;|&nbsp;<a href="https://medium.com/@mshayanalwaha" target="_blank">Medium</a></p> -->
-                           <p style="text-align:center">
-                              <a href="mailto:hussainm13579@gmail.com">Email</a>&nbsp;|&nbsp;
-                              <a href="https://drive.google.com/file/d/1Pn6n54TRUTi4k0LPH7cgIIovIDZEE9r0/view?usp=sharing"
-                                 target="_blank">CV</a>&nbsp;|&nbsp;
-                              <a href="https://github.com/MHDoh" target="_blank">Github</a>&nbsp;|&nbsp;<a
-                                 href="https://www.linkedin.com/in/mohammad-hussain1/"
-                                 target="_blank">LinkedIn</a>&nbsp;|&nbsp;
-                           </p>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-               <!-- BIO -->
-               <table class="bio-table">
-                  <tbody>
-                     <tr style="padding:0px">
-                        <td id="pp" class="desktop-left" style="padding:2.5%;">
-                           <img class="pfp" id="pp_img" style="max-width: 100%;" alt="profile photo"
-                              src="assets/images/pfp.jpg" class="hoverZoomLink">
-                        </td>
-                        <td class="intro-text desktop-right" id="intro">
-                           <p>
-                           I am a <strong>fourth-year Electrical and Electronics Engineering (EEE)</strong> student at <a 
-                              href="https://w3.bilkent.edu.tr/bilkent/" target="_blank">Bilkent University</a>. 
-                           My primary interests lie in exploring the applications of machine learning in signal processing and telecommunications.
-                        </p>
-                        
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
+   <!-- Main Content -->
+   <main>
+      <!-- Introduction Section -->
+      <section class="intro" data-aos="fade-up">
+         <img class="pfp" src="assets/images/pfp.jpg" alt="Profile Photo of Mohammad Hussain">
+         <p>
+            Welcome to my personal portfolio! I'm a passionate Electrical and Electronics Engineering student at <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank">Bilkent University</a>, where I immerse myself in the fascinating world of technology. My journey revolves around exploring the synergy between machine learning, signal processing, and telecommunications.
+         </p>
+      </section>
 
-               <!-- NAVBAR -->
-               <table>
-                  <tbody>
-                     <tr>
-                        <td
-                        style="padding: 3%; padding-left: 3%; padding-right: 3%; width: 100%; vertical-align: middle; margin-bottom: 0; text-align: center;">
-                        <heading class="navbar-heading hidden" style="margin-right: 16px;">
-                           <a class="navbar-links" onclick="let_there_be('education')">Education</a>
-                        </heading> &nbsp;&nbsp;
-                        <heading class="navbar-heading">
-                           <a class="navbar-links active" id="navbar_projects" onclick="let_there_be('projects')">Projects</a>
-                        </heading> &nbsp;&nbsp;
-                        <heading class="navbar-heading">
-                           <a class="navbar-links" id="navbar_certificates" onclick="let_there_be('certificates')">Certificates</a>
-                        </heading> &nbsp;&nbsp;
-                        <heading class="navbar-heading">
-                           <a class="navbar-links" id="navbar_research" onclick="let_there_be('research')">Research</a>
-                        </heading>
-                     </td>                     
-                     </tr>
-                  </tbody>
-               </table>
-               <!-- RESEARCH -->
-               <table class="hidden content-table" id="pubs_table">
-                  <tbody>
-                     <tr>
-                        <td></td>
-                     </tr>
-                  </tbody>
-               </table>
-            
-               <!-- CERTIFICATES -->
-               <table class="hidden content-table" id="actscerts_table">
-                  <tbody>
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td class="image-cell">
-                           <a href="https://drive.google.com/file/d/15UL0_tCLycgzkXSvBiFgkR4UPOmN4clx/view?usp=sharing"
-                              target="_blank">
-                              <img class="image-table" src="assets/images/cs50.png" width="100%">
-                           </a>
-                        </td>
-                        <td class="desc-cell">
-                           <a>
-                              <papertitle>Harvard's CS50x</papertitle>
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/file/d/15UL0_tCLycgzkXSvBiFgkR4UPOmN4clx/view?usp=sharing"
-                              target="_blank">certificate</a>
-                           <p class="desc-cell-text">Took the Harvard's CS50x 2021 course. Learnt crucial concepts from
-                              different aspects of Computer Science. </p>
-                           <p class="desc-cell-text-small">C | Python | HTML | Javascript | Flask</p>
-                        </td>
-                     </tr>
+      <!-- Navigation Tabs -->
+      <nav class="tabs" data-aos="fade-in">
+         <button class="navbtn" onclick="showSection('education')">Education</button>
+         <button class="navbtn" onclick="showSection('projects')">Projects</button>
+         <button class="navbtn" onclick="showSection('experience')">Experience</button>
+         <button class="navbtn" onclick="showSection('skills')">Skills</button>
+         <button class="navbtn" onclick="showSection('certifications')">Certifications</button>
+      </nav>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td class="image-cell">
+      <!-- Sections -->
+      <!-- Education Section -->
+      <section id="education" class="content-section" data-aos="fade-up">
+         <h2>Education</h2>
+         <article>
+            <h3>Bilkent University</h3>
+            <p><strong>BSc in Electrical and Electronics Engineering</strong></p>
+            <p><em>Expected Graduation: June 2025</em></p>
+            <p>
+               My time at Bilkent University has been transformative, providing me with a solid foundation in engineering principles and the opportunity to delve into advanced topics like digital signal processing and neural networks.
+            </p>
+         </article>
+      </section>
 
-                           <a href="https://drive.google.com/file/d/1IW6JgTCaTXFNBm6Na4_hm3g10RyBuo4K/view?usp=sharing"
-                              target="_blank">
-                              <img class="image-table" src="assets/images/brain.png" width="100%">
-                           </a>
-                        </td>
-                        <td class="desc-cell">
-                           <a>
-                              <papertitle>Brainnest Frontend Training Program</papertitle>
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/file/d/1IW6JgTCaTXFNBm6Na4_hm3g10RyBuo4K/view?usp=sharing"
-                              target="_blank">certificate</a> |
-                           <a href="https://scorpia2004.github.io/Brainnest-Frontend/" target="_blank">repo</a>
-                           <p class="desc-cell-text">Training program where I worked with industry professionals at
-                              Brainnest, a German webdev company</p>
-                           <p class="desc-cell-text-small">HTML | CSS | JavaScript</p>
-                        </td>
-                     </tr>
+      <!-- Projects Section -->
+      <section id="projects" class="content-section hidden">
+         <h2>Projects</h2>
 
+         <!-- Video Analytics and Sensor Integration System -->
+         <article data-aos="fade-up">
+            <h3>Smart City Video Analytics Integration</h3>
+            <p>
+               Developed a real-time monitoring system integrating video analytics with environmental sensors for smart city applications.
+            </p>
+         </article>
 
+         <!-- Neural Networks for Legged Locomotion -->
+         <article data-aos="fade-up" data-aos-delay="100">
+            <h3>Neural Networks in Robotics</h3>
+            <p>
+               Explored training neural networks for legged locomotion under the guidance of Prof. Omer Morgül.
+            </p>
+         </article>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td class="image-cell">
+         <!-- OCR System Development -->
+         <article data-aos="fade-up" data-aos-delay="200">
+            <h3>Optical Character Recognition System</h3>
+            <p>
+               Developed an OCR system using Python and OpenCV to extract text from images with high accuracy.
+            </p>
+         </article>
 
-                           <a href="" target="_blank">
-                              <img class="image-table" src="assets/images/gdsc.png" width="100%">
-                           </a>
-                        </td>
-                        <td class="desc-cell">
-                           <a>
-                              <papertitle>Google Developer Student Club</papertitle>
-                           </a>
-                           <br>
-                           <!-- <a href="https://youtu.be/ioeeD3LapDI" target="_blank">video</a> -->
-                           <p class="desc-cell-text">Creative head of GDSC and organised events for Bilkent students</p>
-                           <!-- <p class="desc-cell-text-small">Java | Vaadin</p> -->
-                        </td>
-                     </tr>
+         <!-- Image Classification -->
+         <article data-aos="fade-up" data-aos-delay="300">
+            <h3>Image Classification with CNNs</h3>
+            <p>
+               Created an image classification model using Convolutional Neural Networks on the CIFAR-10 dataset.
+            </p>
+         </article>
 
+         <!-- Sentiment Analysis -->
+         <article data-aos="fade-up" data-aos-delay="400">
+            <h3>Sentiment Analysis of Movie Reviews</h3>
+            <p>
+               Built an NLP model to perform sentiment analysis on IMDB movie reviews, achieving high accuracy.
+            </p>
+         </article>
 
+         <!-- Customer Segmentation -->
+         <article data-aos="fade-up" data-aos-delay="500">
+            <h3>Customer Segmentation with K-Means</h3>
+            <p>
+               Applied K-Means clustering to segment customers based on purchasing behavior for targeted marketing.
+            </p>
+         </article>
 
-                  </tbody>
-               </table>
-               <!-- PROJECTS -->
-               <table class="content-table" id="proj_table">
-                  <tbody>
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td class="image-cell">
+         <!-- Movie Recommendation System -->
+         <article data-aos="fade-up" data-aos-delay="600">
+            <h3>Movie Recommendation System</h3>
+            <p>
+               Implemented a collaborative filtering system using stacked autoencoders in PyTorch.
+            </p>
+         </article>
 
-                           <a href="https://github.com/SCORPIA2004/CampusConnect" target="_blank">
-                              <img class="image-table" src="assets/images/CampusConnect.png" width="100%">
-                           </a>
-                        </td>
-                        <td class="desc-cell">
-                           <a>
-                              <papertitle>CampusConnect</papertitle>
-                           </a>
-                           <br>
-                           <a href="https://campus-connect-undefined.onrender.com/" target="_blank">web app</a> /
-                           <a href="https://youtu.be/J5G0Qc4Uwq0" target="_blank">video</a> /
-                           <a href="https://github.com/SCORPIA2004/CampusConnect" target="_blank">repo</a>
-                           <p class="desc-cell-text">A social webapp that helps connect all Bilkent students together.
-                              Combines ideas behind websites like Reddit and Letgo.</p>
-                           <p class="desc-cell-text-small">MongoDB | ExpressJS | React | NodeJS</p>
-                        </td>
-                     </tr>
+         <!-- Scalar Quantization -->
+         <article data-aos="fade-up" data-aos-delay="700">
+            <h3>Image Quantization Techniques</h3>
+            <p>
+               Explored scalar quantization of gray-scale images using uniform and non-uniform methods in MATLAB.
+            </p>
+         </article>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td class="image-cell">
+         <!-- Size Reduction and Generation -->
+         <article data-aos="fade-up" data-aos-delay="800">
+            <h3>Digital Image Processing</h3>
+            <p>
+               Conducted size reduction and generation in digital images using anti-aliasing filters and approximation techniques.
+            </p>
+         </article>
 
-                           <a href="https://github.com/SCORPIA2004/AvASys-Ground-Control-System" target="_blank">
-                              <img class="image-table" src="assets/images/neo.png" width="100%">
-                           </a>
-                        </td>
-                        <td class="desc-cell">
-                           <a>
-                              <papertitle>AvASys v1.2.2</papertitle>
-                           </a>
-                           <br>
-                           <a href="https://github.com/SCORPIA2004/AvASys-Ground-Control-System"
-                              target="_blank">repo</a> /
-                           <a href="https://youtu.be/OwSjItP4YZ8" target="_blank">video</a>
-                           <p class="desc-cell-text">Flight controller for controlling UAVs <br> Used AdaFruit Ultimate
-                              GPS + Arduino</p>
-                           <p class="desc-cell-text-small">Python | Pyside6 | QtDesigner</p>
-                        </td>
-                     </tr>
+         <!-- Signal Generator -->
+         <article data-aos="fade-up" data-aos-delay="900">
+            <h3>Signal Generator Design</h3>
+            <p>
+               Created a signal generator using FRDM-KL25Z board, DAC, and ADC components for precise signal manipulation.
+            </p>
+         </article>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td class="image-cell">
+         <!-- Plant Water Moisture Controller -->
+         <article data-aos="fade-up" data-aos-delay="1000">
+            <h3>Automated Plant Moisture Controller</h3>
+            <p>
+               Developed an automated system to monitor and maintain plant moisture using BASYS 3 and Arduino.
+            </p>
+         </article>
 
-                           <a href="https://github.com/SCORPIA2004/STARS-Autologger" target="_blank">
-                              <img class="image-table" src="assets/images/stars.png" width="100%">
-                           </a>
-                        </td>
-                        <td class="desc-cell">
-                           <a>
-                              <papertitle>STARS Autologger</papertitle>
-                           </a>
-                           <br>
-                           <a href="https://github.com/SCORPIA2004/STARS-Autologger" target="_blank">repo</a>
-                           <p class="desc-cell-text">Script to automatically sign you in to the Bilkent STARS system and
-                              open Bilkent webmail using Python and Selenium.</p>
-                           <p class="desc-cell-text-small">Python | Selenium</p>
-                        </td>
-                     </tr>
+         <!-- Automated Trash Bin -->
+         <article data-aos="fade-up" data-aos-delay="1100">
+            <h3>Touchless Trash Bin</h3>
+            <p>
+               Designed an automated trash bin with ultrasonic sensors for touchless operation, integrating VHDL for control.
+            </p>
+         </article>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td class="image-cell">
+         <!-- Discrete Operational Amplifier -->
+         <article data-aos="fade-up" data-aos-delay="1200">
+            <h3>Audio Operational Amplifier</h3>
+            <p>
+               Designed a discrete operational amplifier for audio applications using BJT transistors.
+            </p>
+         </article>
 
-                           <a href="https://github.com/SCORPIA2004/IMDb-data-multi-tool" target="_blank">
-                              <img class="image-table" src="assets/images/imdb.png" width="100%">
-                           </a>
-                        </td>
-                        <td class="desc-cell">
-                           <a>
-                              <papertitle>IMDb data multi tool</papertitle>
-                           </a>
-                           <br>
-                           <a href="https://github.com/SCORPIA2004/IMDb-data-multi-tool" target="_blank">repo</a>
-                           <p class="desc-cell-text">Automated IMDb data scrapper using Python and Selenium webdriver.
-                           </p>
-                           <p class="desc-cell-text-small">Python | Selenium | Beautiful Soup</p>
-                        </td>
-                     </tr>
+      </section>
 
-                  </tbody>
-               </table>
+      <!-- Experience Section -->
+      <section id="experience" class="content-section hidden">
+         <h2>Experience</h2>
 
-               <!-- EXP -->
-               <table class="hidden content-table" id="exp_table"
-                  style="border-spacing: 0 0;padding-left: 5%; padding-right: 5%;">
-                  <tbody>
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td>
-                           <table class="desc-table">
-                              <tr>
-                                 <td class="desc-cell-secondary">
-                                    <a href="https://www.linkedin.com/in/muhammed-shayan-usman/" target="_blank">
-                                       <papertitle>→ Part-time Software Developer</papertitle>
-                                    </a>
-                                 </td>
-                                 <td class="desc-cell-secondary">
-                                    <p class="desc-cell-text-small">Jan 2024 - Feb 2024</p>
+         <!-- Nanomagnetic Instruments -->
+         <article data-aos="fade-up">
+            <h3>Nanomagnetic Instruments - Trainee Engineer</h3>
+            <p><em>June – September 2023</em></p>
+            <p>
+               Worked on resolving DAC power issues, configuring high-performance DACs, and improving system efficiency.
+            </p>
+         </article>
 
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td colspan="2">
-                                    <a href="https://dillsuite.com/" target="_blank"><i>Dill</i></a>
-                                    <p class="desc-cell-text">• Using React Native and Firebase to create web apps for
-                                       restaurant management systems</p>
-                                    <p class="desc-cell-text-small">React Native | Firebase | NodeJS</p>
-                                 </td>
-                              </tr>
-                           </table>
-                        </td>
-                     </tr>
+         <!-- Modern Technology Laboratories -->
+         <article data-aos="fade-up" data-aos-delay="100">
+            <h3>Modern Technology Laboratories - Intern</h3>
+            <p><em>August – September 2024</em></p>
+            <p>
+               Developed a crack detection system using ESP32 and CNNs, and optimized neural network models for material strength prediction.
+            </p>
+         </article>
+      </section>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td>
-                           <table class="desc-table">
-                              <tr>
-                                 <td class="desc-cell-secondary">
-                                    <a href="https://www.linkedin.com/in/muhammed-shayan-usman/" target="_blank">
-                                       <papertitle>→ Computer Engineering Intern</papertitle>
-                                    </a>
-                                 </td>
-                                 <td class="desc-cell-secondary">
-                                    <p class="desc-cell-text-small">Jun - Sep 2023</p>
+      <!-- Skills Section -->
+      <section id="skills" class="content-section hidden">
+         <h2>Skills</h2>
+         <p data-aos="fade-up">
+            My technical toolkit includes programming languages, machine learning frameworks, and tools that enable me to tackle complex engineering challenges.
+         </p>
+         <ul data-aos="fade-up" data-aos-delay="100">
+            <li><strong>Programming:</strong> Python, C++, MATLAB, VHDL</li>
+            <li><strong>Machine Learning:</strong> PyTorch, TensorFlow</li>
+            <li><strong>Tools:</strong> OpenCV, YOLO, Tesseract OCR</li>
+            <li><strong>Languages:</strong> English, Urdu, Arabic, Turkish</li>
+         </ul>
+      </section>
 
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td colspan="2">
-                                    <a href="https://www.nanomagnetics-inst.com/" target="_blank"><i>NanoMagnetics
-                                          Instruments</i></a>
-                                    <p class="desc-cell-text">• Used Tkinter and numpy to correct plots for Hysteresis
-                                       Loop data<br>• Created software that obtained and portrayed data for research
-                                       purposes<br>• Integrating new features into the Vibrating Sample Magnometer (VSM)
-                                       software</p>
-                                    <p class="desc-cell-text-small">Python | LABView</p>
-                                 </td>
-                              </tr>
-                           </table>
-                        </td>
-                     </tr>
+      <!-- Certifications Section -->
+      <section id="certifications" class="content-section hidden">
+         <h2>Certifications</h2>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td>
-                           <table class="desc-table">
-                              <tr>
-                                 <td class="desc-cell-secondary">
-                                    <a href="https://www.linkedin.com/in/muhammed-shayan-usman/" target="_blank">
-                                       <papertitle>→ SWE Team Lead</papertitle>
-                                    </a>
-                                 </td>
-                                 <td class="desc-cell-secondary">
-                                    <p class="desc-cell-text-small">Jun - Sep 2023</p>
+         <!-- Deep Learning (Udemy) -->
+         <article data-aos="fade-up">
+            <h3>Deep Learning Specialization</h3>
+            <p><em>Udemy | 2023</em></p>
+            <p>
+               Completed a comprehensive course on Deep Learning, covering neural networks and practical applications.
+            </p>
+         </article>
 
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td colspan="2">
-                                    <a href="https://neostellar.net/" target="_blank"><i>NeoStellar</i></a>
-                                    <p class="desc-cell-text">• Working on UAV flight control system<br>• Creating
-                                       auto-pilot system for unmanned UAV using OpenCV and NVIDIA Jetson Nano</p>
-                                    <p class="desc-cell-text-small">C | Python | UAV</p>
-                                 </td>
-                              </tr>
-                           </table>
-                        </td>
-                     </tr>
+         <!-- Introduction to Machine Learning (Coursera) -->
+         <article data-aos="fade-up" data-aos-delay="100">
+            <h3>Introduction to Machine Learning</h3>
+            <p><em>Coursera | 2023</em></p>
+            <p>
+               Gained foundational knowledge in machine learning techniques, including supervised and unsupervised learning.
+            </p>
+         </article>
 
-                     <tr onmouseout="nerv_stop()" onmouseover="nerv_start()">
-                        <td>
-                           <table class="desc-table">
-                              <tr>
-                                 <td class="desc-cell-secondary">
-                                    <a href="https://www.linkedin.com/in/muhammed-shayan-usman/" target="_blank">
-                                       <papertitle>→ Game Developer Intern</papertitle>
-                                    </a>
-                                 </td>
-                                 <td class="desc-cell-secondary">
-                                    <p class="desc-cell-text-small">Jan - Jun 2023</p>
+         <!-- NLP (Udemy) -->
+         <article data-aos="fade-up" data-aos-delay="200">
+            <h3>Natural Language Processing</h3>
+            <p><em>Udemy | 2023</em></p>
+            <p>
+               Studied NLP techniques and implemented models for text classification and sentiment analysis.
+            </p>
+         </article>
 
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td colspan="2">
-                                    <a href="https://neostellar.net/" target="_blank"><i>Harman Games</i></a>
-                                    <p class="desc-cell-text">• Developing 3D games using Unity Game Engine<br>• Using
-                                       C# for scripting Game object behaviours</p>
-                                    <p class="desc-cell-text-small"> C# | Unity</p>
-                                 </td>
-                              </tr>
-                           </table>
-                        </td>
-                     </tr>
+         <!-- Introduction to Generative AI (Coursera) -->
+         <article data-aos="fade-up" data-aos-delay="300">
+            <h3>Introduction to Generative AI</h3>
+            <p><em>Coursera | 2023</em></p>
+            <p>
+               Explored generative models such as GANs and VAEs, understanding their applications in image and text generation.
+            </p>
+         </article>
+      </section>
+   </main>
 
-                  </tbody>
-               </table>
+   <!-- Footer -->
+   <footer data-aos="fade-in">
+      <p>Thanks for the <a href="http://jonbarron.info" target="_blank">template</a> and <a href="http://egrigokhan.github.io/" target="_blank">cool features</a>!</p>
+   </footer>
 
-
-
-               <!-- ACKNOWLEDGMENTS -->
-               <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-                  <tbody>
-                     <tr>
-                        <td>
-                           <div style="clear:both;">
-                              <p align="right">
-                                 <font size="1"><a class="footer-link" href="http://jonbarron.info"
-                                       target="_blank">Thanks for the template!</a></font>
-                              </p>
-                              <p align="right">
-                                 <font size="1"><a class="footer-link" href="http://egrigokhan.github.io/"
-                                       target="_blank">Thanks for the cool features!</a></font>
-                              </p><br>
-                           </div>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-         </tr>
-      </tbody>
-   </table>
-
+   <!-- Scripts -->
+   <!-- AOS Library Script -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
    <script>
-      window.onload = function () {
-         setTimeout(function () {
-            var splashScreen = document.getElementById('splash-screen');
-            splashScreen.classList.add('fade-out');
-            setTimeout(function () {
-               splashScreen.style.display = 'none';
-            }, 800); // this should be the same duration as the fade-out transition
-         }, 1400);
-      };
-      function let_there_be(something) {
-         // Mapping of categories to their corresponding table and navbar IDs
-         const elements = {
-            research: ["pubs_table", "navbar_research"],
-            games: ["games_table", "navbar_games"],
-            actscerts: ["actscerts_table", "navbar_actscerts"],
-            projects: ["proj_table", "navbar_projects"],
-            exp: ["exp_table", "navbar_exp"],
-            misc: ["misc_table", "navbar_misc"]
-         };
+      AOS.init({
+         duration: 800,
+         once: true,
+      });
 
-         // Get all elements once and store them in an object to avoid multiple DOM queries
-         const allElements = {};
-         Object.values(elements).flat().forEach(id => {
-            allElements[id] = document.getElementById(id);
-         });
-
-         // Helper function to manage visibility and active status
-         const manageElements = (id, visible) => {
-            const element = allElements[id];
-            if (element) {
-               if (!id.startsWith("navbar")) {
-                  element.classList.toggle("hidden", !visible);
-               } else {
-                  element.classList.toggle("active", visible);
-               }
+      function showSection(sectionId) {
+         const sections = document.querySelectorAll('.content-section');
+         sections.forEach(section => {
+            if (section.id === sectionId) {
+               section.classList.remove('hidden');
+            } else {
+               section.classList.add('hidden');
             }
-         };
-
-         // Reset all tables and navbars
-         Object.keys(allElements).forEach(id => {
-            manageElements(id, false);
          });
-
-         // Show the selected table and activate its navbar
-         if (elements[something]) {
-            elements[something].forEach(id => {
-               manageElements(id, true);
-            });
-         }
-
+         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
+// Splash Screen Script
+window.onload = function () {
+   setTimeout(function () {
+      var splashScreen = document.getElementById('splash-screen');
+      splashScreen.classList.add('fade-out');
+      setTimeout(function () {
+         splashScreen.style.display = 'none';
+      }, 800); // Match with CSS transition duration
+   }, 1800); // Reduced duration to align with shorter animation
+};
 
-      /* -- Text effect -- */
-      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-      let interval = null;
-
-      document.querySelector("h1").onmouseover = event => {
-         let iteration = 0;
-
-         clearInterval(interval);
-
-         interval = setInterval(() => {
-            event.target.innerText = event.target.innerText
-               .split("")
-               .map((letter, index) => {
-                  if (index < iteration) {
-                     return event.target.dataset.value[index];
-                  }
-
-                  return letters[Math.floor(Math.random() * 26)]
-               })
-               .join("");
-
-            if (iteration >= event.target.dataset.value.length) {
-               clearInterval(interval);
-            }
-
-            iteration += 1 / 3;
-         }, 20);
-      }
    </script>
-
 </body>
+
 </html>
