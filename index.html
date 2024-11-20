@@ -80,153 +80,213 @@
          <button class="navbtn" onclick="showSection('certifications')">Certifications</button>
       </nav>
 
-      <!-- Sections -->
-      <!-- Education Section -->
-      <section id="education" class="content-section" data-aos="fade-up">
-         <h2>Education</h2>
-         <article>
-            <h3>Bilkent University</h3>
-            <p><strong>BSc in Electrical and Electronics Engineering</strong></p>
-            <p><em>Expected Graduation: June 2025</em></p>
-            <p>
-               My time at Bilkent University has been transformative, providing me with a solid foundation in engineering principles and the opportunity to delve into advanced topics like digital signal processing and neural networks.
-            </p>
-         </article>
-      </section>
+ <!-- Education Section -->
+<section id="education" class="content-section" data-aos="fade-up">
+   <h2>Education</h2>
+   <article>
+      <h3>Bilkent University</h3>
+      <p><strong>BSc in Electrical and Electronics Engineering</strong></p>
+      <p><em>Expected Graduation: June 2025</em></p>
+      <p><strong>CGPA:</strong> 3.28 / 4.0</p>
+      <p><strong>Scholarship:</strong> 80% Merit Scholarship</p>
+      <p><strong>Class Ranking:</strong> Top 15%</p>
+      <p>
+         My time at Bilkent University has been transformative, providing me with a solid foundation in engineering principles and the opportunity to delve into advanced topics like digital signal processing and neural networks.
+      </p>
+   </article>
+</section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="content-section hidden">
-         <h2>Projects</h2>
 
-         <!-- Video Analytics and Sensor Integration System -->
-         <article data-aos="fade-up">
-            <h3>Smart City Video Analytics Integration</h3>
-            <p>
-               Developed a real-time monitoring system integrating video analytics with environmental sensors for smart city applications.
-            </p>
-         </article>
+    <!-- Projects Section -->
+<section id="projects" class="content-section hidden">
+   <h2>Projects</h2>
 
-         <!-- Neural Networks for Legged Locomotion -->
-         <article data-aos="fade-up" data-aos-delay="100">
-            <h3>Neural Networks in Robotics</h3>
-            <p>
-               Explored training neural networks for legged locomotion under the guidance of Prof. Omer Morgül.
-            </p>
-         </article>
+   <!-- Smart City Video Analytics Integration -->
+   <article data-aos="fade-up">
+      <h3>Smart City Video Analytics Integration</h3>
+      <p>
+         Developed a real-time monitoring system integrating video analytics with environmental sensors (temperature, humidity, air quality, etc.) for smart city and industrial applications, under the supervision of Karel Electronics.
+      </p>
+      <ul>
+         <li>Implemented YOLO, OpenCV, and anomaly detection algorithms for edge-based video analytics on Raspberry Pi to reduce latency and bandwidth usage; optimized for 5G communication.</li>
+         <li>Anomalies are detected and flagged by edge devices and further validated by a central management system for accurate decision-making and action triggering.</li>
+         <li>Utilized Quectel 5G EVB Kit for testing and optimizing 5G communication infrastructure for seamless integration with edge devices.</li>
+         <li>Integrated environmental sensors for comprehensive monitoring and developed 5G network gateways for reliable and low-latency communication.</li>
+      </ul>
+   </article>
 
-         <!-- OCR System Development -->
-         <article data-aos="fade-up" data-aos-delay="200">
-            <h3>Optical Character Recognition System</h3>
-            <p>
-               Developed an OCR system using Python and OpenCV to extract text from images with high accuracy.
-            </p>
-         </article>
+   <!-- Training Neural Networks for Legged Locomotion -->
+   <article data-aos="fade-up" data-aos-delay="100">
+      <h3>Training Neural Networks for Legged Locomotion</h3>
+      <p>
+         Conducted individual research under the supervision of Prof. Omer Morgül to train neural networks for legged locomotion.
+      </p>
+      <ul>
+         <li>Enhanced data representation by analyzing variable relationships without regression or learning methods, utilizing MATLAB’s <code>hist3</code> function and "Tiled Histogram View" to visualize interactions between variables.</li>
+         <li>Focused data analysis on key datasets (SLIP, SLIPD, TDSLIP) to illustrate model behavior variations across different inputs and conditions.</li>
+         <li>Expanded learning methods comparison by using all nonzero initial apex variables and control inputs to predict the final apex, testing models including Support Vector Machine (SVM), Gaussian Process Regression (GPR), and Neural Networks.</li>
+      </ul>
+   </article>
 
-         <!-- Image Classification -->
-         <article data-aos="fade-up" data-aos-delay="300">
-            <h3>Image Classification with CNNs</h3>
-            <p>
-               Created an image classification model using Convolutional Neural Networks on the CIFAR-10 dataset.
-            </p>
-         </article>
+   <!-- Optical Character Recognition System Development -->
+   <article data-aos="fade-up" data-aos-delay="200">
+      <h3>Optical Character Recognition System Development</h3>
+      <p>
+         Developed an OCR system using Python and OpenCV to extract text from images with high accuracy.
+      </p>
+      <ul>
+         <li>Implemented Tesseract OCR engine for text recognition and preprocessing techniques for image enhancement.</li>
+         <li>Achieved high accuracy in extracting text from various image formats, including scanned documents and photographs.</li>
+      </ul>
+   </article>
 
-         <!-- Sentiment Analysis -->
-         <article data-aos="fade-up" data-aos-delay="400">
-            <h3>Sentiment Analysis of Movie Reviews</h3>
-            <p>
-               Built an NLP model to perform sentiment analysis on IMDB movie reviews, achieving high accuracy.
-            </p>
-         </article>
+   <!-- Image Classification using Convolutional Neural Networks -->
+   <article data-aos="fade-up" data-aos-delay="300">
+      <h3>Image Classification using Convolutional Neural Networks</h3>
+      <p>
+         Created an image classification model using Convolutional Neural Networks on the CIFAR-10 dataset.
+      </p>
+      <ul>
+         <li>Implemented the model in PyTorch, achieving an accuracy of 85%.</li>
+         <li>Optimized the model using data augmentation, dropout, and batch normalization techniques.</li>
+      </ul>
+   </article>
 
-         <!-- Customer Segmentation -->
-         <article data-aos="fade-up" data-aos-delay="500">
-            <h3>Customer Segmentation with K-Means</h3>
-            <p>
-               Applied K-Means clustering to segment customers based on purchasing behavior for targeted marketing.
-            </p>
-         </article>
+   <!-- Sentiment Analysis of Movie Reviews using NLP -->
+   <article data-aos="fade-up" data-aos-delay="400">
+      <h3>Sentiment Analysis of Movie Reviews using NLP</h3>
+      <p>
+         Built an NLP model to perform sentiment analysis on IMDB movie reviews, achieving 90% accuracy.
+      </p>
+      <ul>
+         <li>Utilized tokenization, word embeddings, and LSTM networks in TensorFlow.</li>
+      </ul>
+   </article>
 
-         <!-- Movie Recommendation System -->
-         <article data-aos="fade-up" data-aos-delay="600">
-            <h3>Movie Recommendation System</h3>
-            <p>
-               Implemented a collaborative filtering system using stacked autoencoders in PyTorch.
-            </p>
-         </article>
+   <!-- Customer Segmentation using K-Means Clustering -->
+   <article data-aos="fade-up" data-aos-delay="500">
+      <h3>Customer Segmentation using K-Means Clustering</h3>
+      <p>
+         Applied K-Means clustering to segment customers based on purchasing behavior for targeted marketing.
+      </p>
+      <ul>
+         <li>Analyzed customer groups to provide insights for targeted marketing strategies.</li>
+         <li>Employed Python libraries such as Pandas, NumPy, and Matplotlib for data processing and visualization.</li>
+      </ul>
+   </article>
 
-         <!-- Scalar Quantization -->
-         <article data-aos="fade-up" data-aos-delay="700">
-            <h3>Image Quantization Techniques</h3>
-            <p>
-               Explored scalar quantization of gray-scale images using uniform and non-uniform methods in MATLAB.
-            </p>
-         </article>
+   <!-- Movie Recommendation System using PyTorch -->
+   <article data-aos="fade-up" data-aos-delay="600">
+      <h3>Movie Recommendation System using PyTorch</h3>
+      <p>
+         Implemented a collaborative filtering system using stacked autoencoders in PyTorch.
+      </p>
+      <ul>
+         <li>Trained stacked autoencoders with mean squared error loss to predict missing ratings.</li>
+      </ul>
+   </article>
 
-         <!-- Size Reduction and Generation -->
-         <article data-aos="fade-up" data-aos-delay="800">
-            <h3>Digital Image Processing</h3>
-            <p>
-               Conducted size reduction and generation in digital images using anti-aliasing filters and approximation techniques.
-            </p>
-         </article>
+   <!-- Uniform and Non-Uniform Scalar Quantization of Gray-Scale Images -->
+   <article data-aos="fade-up" data-aos-delay="700">
+      <h3>Uniform and Non-Uniform Scalar Quantization of Gray-Scale Images</h3>
+      <p>
+         Explored scalar quantization of gray-scale images using uniform and non-uniform methods in MATLAB.
+      </p>
+      <ul>
+         <li>Developed a compander for non-uniform quantization using the Lloyd-Max algorithm.</li>
+         <li>Enhanced image compression efficiency through MATLAB simulations.</li>
+      </ul>
+   </article>
 
-         <!-- Signal Generator -->
-         <article data-aos="fade-up" data-aos-delay="900">
-            <h3>Signal Generator Design</h3>
-            <p>
-               Created a signal generator using FRDM-KL25Z board, DAC, and ADC components for precise signal manipulation.
-            </p>
-         </article>
+   <!-- Size Reduction and Generation in Digital Images -->
+   <article data-aos="fade-up" data-aos-delay="800">
+      <h3>Size Reduction and Generation in Digital Images</h3>
+      <p>
+         Conducted size reduction and generation in digital images using anti-aliasing filters and approximation techniques.
+      </p>
+      <ul>
+         <li>Improved image resolution and processing speed with algorithmic optimizations.</li>
+      </ul>
+   </article>
 
-         <!-- Plant Water Moisture Controller -->
-         <article data-aos="fade-up" data-aos-delay="1000">
-            <h3>Automated Plant Moisture Controller</h3>
-            <p>
-               Developed an automated system to monitor and maintain plant moisture using BASYS 3 and Arduino.
-            </p>
-         </article>
+   <!-- Signal Generator Design -->
+   <article data-aos="fade-up" data-aos-delay="900">
+      <h3>Signal Generator Design</h3>
+      <p>
+         Created a signal generator using FRDM-KL25Z board, DAC, and ADC components for precise signal manipulation.
+      </p>
+      <ul>
+         <li>Applied DSP techniques to ensure signal accuracy and stability in testing environments.</li>
+      </ul>
+   </article>
 
-         <!-- Automated Trash Bin -->
-         <article data-aos="fade-up" data-aos-delay="1100">
-            <h3>Touchless Trash Bin</h3>
-            <p>
-               Designed an automated trash bin with ultrasonic sensors for touchless operation, integrating VHDL for control.
-            </p>
-         </article>
+   <!-- Automated Plant Moisture Controller -->
+   <article data-aos="fade-up" data-aos-delay="1000">
+      <h3>Automated Plant Moisture Controller</h3>
+      <p>
+         Developed an automated system to monitor and maintain plant moisture using BASYS 3 and Arduino.
+      </p>
+      <ul>
+         <li>Optimized water usage with adaptive control algorithms.</li>
+      </ul>
+   </article>
 
-         <!-- Discrete Operational Amplifier -->
-         <article data-aos="fade-up" data-aos-delay="1200">
-            <h3>Audio Operational Amplifier</h3>
-            <p>
-               Designed a discrete operational amplifier for audio applications using BJT transistors.
-            </p>
-         </article>
+   <!-- Touchless Trash Bin -->
+   <article data-aos="fade-up" data-aos-delay="1100">
+      <h3>Touchless Trash Bin</h3>
+      <p>
+         Designed an automated trash bin with ultrasonic sensors for touchless operation, integrating VHDL for control.
+      </p>
+      <ul>
+         <li>Used BASYS 3 and VHDL for control integration.</li>
+      </ul>
+   </article>
 
-      </section>
+   <!-- Discrete Operational Amplifier for Audio Applications -->
+   <article data-aos="fade-up" data-aos-delay="1200">
+      <h3>Discrete Operational Amplifier for Audio Applications</h3>
+      <p>
+         Designed a discrete operational amplifier for audio applications using BJT transistors.
+      </p>
+      <ul>
+         <li>Ensured low-noise operation for high-performance audio applications.</li>
+      </ul>
+   </article>
 
-      <!-- Experience Section -->
-      <section id="experience" class="content-section hidden">
-         <h2>Experience</h2>
+</section>
 
-         <!-- Nanomagnetic Instruments -->
-         <article data-aos="fade-up">
-            <h3>Nanomagnetic Instruments - Trainee Engineer</h3>
-            <p><em>June – September 2023</em></p>
-            <p>
-               Worked on resolving DAC power issues, configuring high-performance DACs, and improving system efficiency.
-            </p>
-         </article>
+<!-- Experience Section -->
+<section id="experience" class="content-section hidden">
+   <h2>Experience</h2>
 
-         <!-- Modern Technology Laboratories -->
-         <article data-aos="fade-up" data-aos-delay="100">
-            <h3>Modern Technology Laboratories - Intern</h3>
-            <p><em>August – September 2024</em></p>
-            <p>
-               Developed a crack detection system using ESP32 and CNNs, and optimized neural network models for material strength prediction.
-            </p>
-         </article>
-      </section>
+   <!-- Nanomagnetic Instruments -->
+   <article data-aos="fade-up">
+      <h3>Nanomagnetic Instruments - Trainee Engineer</h3>
+      <p><em>June – September 2023</em></p>
+      <p>
+         Worked on resolving DAC power issues, configuring high-performance DACs, and improving system efficiency.
+      </p>
+      <ul>
+         <li>Resolved DAC power issues using soldering and troubleshooting; validated PCBs for DAC and ADC boards, and prepared bill of materials.</li>
+         <li>Configured AK4495 DAC in PWM mode via I2C on BASYS3 and Arduino; enabled I<sup>2</sup>S communication with Raspberry Pi Pico to generate audio waveforms.</li>
+         <li>Improved system efficiency by designing a custom oscillator with Raspberry Pi Pico, replacing KT7050.</li>
+      </ul>
+   </article>
 
+   <!-- Modern Technology Laboratories -->
+   <article data-aos="fade-up" data-aos-delay="100">
+      <h3>Modern Technology Laboratories - Intern</h3>
+      <p><em>August – September 2024</em></p>
+      <p>
+         Developed a crack detection system using ESP32 and CNNs, and optimized neural network models for material strength prediction.
+      </p>
+      <ul>
+         <li>Developed a crack detection system using the ESP32 microcontroller integrated with Convolutional Neural Networks (CNNs), utilizing a hybrid approach for image capture and real-time processing on an external device.</li>
+         <li>Created and optimized a neural network model for predicting concrete compressive strength using the UCI dataset; established baseline performance with Random Forest and Gradient Boosting models, achieving 95% accuracy with the final PyTorch model.</li>
+      </ul>
+   </article>
+
+</section>
       <!-- Skills Section -->
       <section id="skills" class="content-section hidden">
          <h2>Skills</h2>
