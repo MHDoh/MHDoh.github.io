@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Mohammad Hussain | M.Sc. Researcher · Wireless & Deep Learning</title>
+
+   <meta name="author" content="Mohammad Hussain">
+   <meta name="description" content="Academic homepage of Mohammad Hussain, M.Sc. researcher in Electrical & Electronics Engineering at Koç University. Research in safe reinforcement learning, conformal prediction, and resource-efficient deep learning for wireless communications and O-RAN.">
+   <meta name="keywords" content="Mohammad Hussain, Koç University, Bilkent University, Sinem Coleri, CSI Prediction, MIMO, Wireless Communications, Deep Learning, PyTorch, O-RAN, 5G, 6G, Safe Reinforcement Learning, Conformal Prediction">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://mhdoh.github.io/">
+
+   <!-- Open Graph / Facebook / LinkedIn -->
+   <meta property="og:type" content="profile">
+   <meta property="og:url" content="https://mhdoh.github.io/">
+   <meta property="og:title" content="Mohammad Hussain | M.Sc. Researcher · Wireless & Deep Learning">
+   <meta property="og:description" content="Academic homepage of Mohammad Hussain, M.Sc. researcher in Electrical & Electronics Engineering at Koç University. Research in safe reinforcement learning, conformal prediction, and resource-efficient deep learning for wireless communications and O-RAN.">
+   <meta property="og:image" content="https://mhdoh.github.io/assets/images/og-image.jpg">
+   <meta property="og:image:width" content="1200">
+   <meta property="og:image:height" content="630">
+   <meta property="profile:first_name" content="Mohammad">
+   <meta property="profile:last_name" content="Hussain">
+
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Mohammad Hussain | M.Sc. Researcher · Wireless & Deep Learning">
+   <meta name="twitter:description" content="Academic homepage of Mohammad Hussain, M.Sc. researcher in Electrical & Electronics Engineering at Koç University.">
+   <meta name="twitter:image" content="https://mhdoh.github.io/assets/images/og-image.jpg">
+
+   <!-- Structured Data -->
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "Person",
+     "name": "Mohammad Hussain",
+     "url": "https://mhdoh.github.io/",
+     "image": "https://mhdoh.github.io/assets/images/pfp.jpg",
+     "jobTitle": "Graduate Research Assistant",
+     "affiliation": {
+       "@type": "CollegeOrUniversity",
+       "name": "Koç University"
+     },
+     "alumniOf": {
+       "@type": "CollegeOrUniversity",
+       "name": "Bilkent University"
+     },
+     "email": "mailto:mohussain25@ku.edu.tr",
+     "sameAs": [
+       "https://github.com/MHDoh",
+       "https://www.linkedin.com/in/mohammad-hussain1/",
+       "https://orcid.org/0009-0004-1547-3027",
+       "https://scholar.google.com/citations?user=twjU6ucAAAAJ&hl=en",
+       "https://arxiv.org/search/eess?searchtype=author&query=Hussain,+M"
+     ]
+   }
+   </script>
+
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-81BGDVQ3BM"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-81BGDVQ3BM');
+   </script>
+
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+   
+   <!-- FontAwesome 6 Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+   <!-- Stylesheet -->
+   <link rel="stylesheet" href="stylesheet.css">
+   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+   <script>
+      function toggleDarkMode() {
+         document.body.classList.toggle('dark-mode');
+         const isDark = document.body.classList.contains('dark-mode');
+         localStorage.setItem('darkMode', isDark);
+         const icon = document.getElementById('theme-icon');
+         icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+         const savedMode = localStorage.getItem('darkMode');
+         if (savedMode === 'true' || (savedMode === null && prefersDark)) {
+            document.body.classList.add('dark-mode');
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.className = 'fa-solid fa-sun';
+         }
+      });
+
+      function toggleBibtex(id) {
+         const el = document.getElementById(id);
+         if (el.style.display === 'block') {
+            el.style.display = 'none';
+         } else {
+            el.style.display = 'block';
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <!-- Floating Theme Toggle -->
+   <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+      <i id="theme-icon" class="fa-solid fa-moon"></i>
+   </button>
+
+   <div class="container">
+
+      <!-- Header / Hero Section -->
+      <header class="hero-section">
+         <div class="hero-content">
+            <div class="hero-text">
+               <h1 class="hero-name">Mohammad Hussain</h1>
+               <p class="hero-title">
+                  <strong>M.Sc. Researcher</strong> in Electrical & Electronics Engineering<br>
+                  <a href="https://www.ku.edu.tr/" target="_blank" rel="noopener">Koç University</a> · Wireless Networks Laboratory<br>
+                  <span class="advisor-text">Advised by <a href="https://mysite.ku.edu.tr/scoleri/" target="_blank" rel="noopener">Prof. Sinem Coleri</a></span>
+               </p>
+               
+               <div class="phd-badge">
+                  <span class="status-dot"></span>
+                  <span><strong>Seeking PhD positions for Fall 2027</strong> in Deep Learning for Wireless / 6G PHY</span>
+               </div>
+
+               <!-- Social / Academic Links with robust SVG icons -->
+               <div class="academic-links">
+                  <a href="mailto:mohussain25@ku.edu.tr" class="link-btn" title="Email">
+                     <i class="fa-solid fa-envelope" style="color: #ea4335;"></i> Email
+                  </a>
+                  <a href="https://scholar.google.com/citations?user=twjU6ucAAAAJ&hl=en" target="_blank" rel="noopener" class="link-btn" title="Google Scholar">
+                     <!-- Google Scholar SVG -->
+                     <svg class="btn-svg-icon" viewBox="0 0 24 24" width="15" height="15">
+                        <path fill="#4285F4" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                     </svg>
+                     Scholar
+                  </a>
+                  <a href="https://orcid.org/0009-0004-1547-3027" target="_blank" rel="noopener" class="link-btn" title="ORCID">
+                     <!-- ORCID SVG -->
+                     <svg class="btn-svg-icon" viewBox="0 0 256 256" width="15" height="15">
+                        <path fill="#A6CE39" d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm-38.6 195.8H65.8V77.4h23.6v118.4zm-11.8-135c-7.6 0-13.8-6.2-13.8-13.8s6.2-13.8 13.8-13.8 13.8 6.2 13.8 13.8-6.2 13.8-13.8 13.8zm118.6 135h-23.2v-58.4c0-14.7-5.3-24.8-18.4-24.8-10 0-16 6.7-18.6 13.2-1 2.4-1.2 5.7-1.2 9v61h-23.2s.3-107.3 0-118.4h23.2v16.8c3.1-4.8 8.6-11.6 21.1-11.6 15.4 0 27 10.1 27 31.7v81.5h.1z"/>
+                     </svg>
+                     ORCID
+                  </a>
+                  <a href="https://arxiv.org/search/eess?searchtype=author&query=Hussain,+M" target="_blank" rel="noopener" class="link-btn" title="arXiv Author Profile">
+                     <!-- arXiv SVG badge -->
+                     <span class="arxiv-mini-tag">arXiv</span>
+                     Profile
+                  </a>
+                  <a href="https://github.com/MHDoh" target="_blank" rel="noopener" class="link-btn" title="GitHub">
+                     <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/mohammad-hussain1/" target="_blank" rel="noopener" class="link-btn" title="LinkedIn">
+                     <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
+                  </a>
+                  <a href="resume.pdf" target="_blank" rel="noopener" class="link-btn" title="Curriculum Vitae">
+                     <i class="fa-solid fa-file-pdf" style="color: #e11d48;"></i> CV
+                  </a>
+               </div>
+            </div>
+
+            <div class="hero-avatar">
+               <img class="pfp" src="assets/images/pfp.jpg" alt="Mohammad Hussain Photo">
+            </div>
+         </div>
+      </header>
+
+      <!-- Navigation Bar -->
+      <nav class="main-nav">
+         <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#publications" class="nav-link">Publications</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+         </ul>
+      </nav>
+
+      <main>
+         <!-- About Section -->
+         <section id="about" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-user"></i> About Me</h2>
+            <div class="card">
+               <p>
+                  I am a Master's researcher in Electrical and Electronics Engineering at <strong>Koç University</strong> (Istanbul, Türkiye), working in the Wireless Networks Laboratory under the supervision of <strong>Prof. Sinem Coleri</strong>.
+               </p>
+               <p>
+                  My research lies at the intersection of <strong>Uncertainty-Aware Machine Learning</strong>, <strong>Safe Reinforcement Learning</strong>, and <strong>Next-Generation Wireless Communications (5G-Advanced / 6G & O-RAN)</strong>. I am particularly interested in developing theoretical and algorithmic frameworks—combining deep reinforcement learning, online conformal prediction, risk-sensitive optimization (CVaR), and deterministic safety shields—that provide provable reliability and extreme energy/computational efficiency for ultra-low-latency and broadband slicing. My current work is done in collaboration with Turkcell and Opticoms on AI-driven O-RAN resource allocation.
+               </p>
+               <p>
+                  Between my B.Sc. and M.Sc., I worked as a Medical Imaging and AI intern at <strong>Radiologics</strong>, building CT segmentation and detection pipelines for pediatric and skeletal imaging.
+               </p>
+               <p>
+                  Previously, I earned my B.Sc. in Electrical and Electronics Engineering from <strong>Bilkent University</strong> (Ankara, Turkey) in 2025 on an 80% Merit Scholarship (Top 15% class ranking).
+               </p>
+            </div>
+         </section>
+
+         <!-- Research Interests Section -->
+         <section id="research" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-satellite-dish"></i> Research Interests</h2>
+            <div class="interests-grid">
+               <div class="interest-tag">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <strong>Safe & Uncertainty-Aware Reinforcement Learning</strong>
+                  <span>Constrained DRL, exact-cardinality sampling, execution-aware safety shielding, and multi-timescale control</span>
+               </div>
+               <div class="interest-tag">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <strong>Conformal Prediction & Statistical Reliability</strong>
+                  <span>Causal one-sided conformal bounds, Conditional Value-at-Risk (CVaR), worst-user tail latency guarantees for URLLC</span>
+               </div>
+               <div class="interest-tag">
+                  <i class="fa-solid fa-network-wired"></i>
+                  <strong>Hierarchical O-RAN Control & Slicing</strong>
+                  <span>Multi-timescale Non-RT / Near-RT RIC xApps & O-DU scheduling for dynamic eMBB–URLLC coexistence</span>
+               </div>
+               <div class="interest-tag">
+                  <i class="fa-solid fa-microchip"></i>
+                  <strong>Resource-Efficient DL & PHY/MAC Layer</strong>
+                  <span>Lightweight neural architectures, CSI prediction & compression (GRU-Attn-DSLH), Massive MIMO, 3GPP TR 38.901</span>
+               </div>
+            </div>
+         </section>
+
+         <!-- News Section -->
+         <section id="news" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-bullhorn"></i> News</h2>
+            <div class="card news-card">
+               <ul class="news-list">
+                  <li>
+                     <span class="news-date">May 2026</span>
+                     <span class="news-text">📄 Our paper <strong>"Resource-Efficient CSI Prediction: A Gated Fusion and Factorized Projection Approach"</strong> was published in <em>IEEE Communications Letters</em>! Check out the <a href="https://ieeexplore.ieee.org/document/11513393" target="_blank" rel="noopener">IEEE Xplore article</a> and <a href="https://github.com/MHDoh/resource-efficient-csi-prediction" target="_blank" rel="noopener">open-source code</a>.</span>
+                  </li>
+                  <li>
+                     <span class="news-date">Oct 2025</span>
+                     <span class="news-text">🎓 Started M.Sc. in Electrical and Electronics Engineering at <strong>Koç University</strong> (Wireless Networks Laboratory) under the supervision of Prof. Sinem Coleri, working on AI-driven O-RAN resource allocation with Turkcell and Opticoms.</span>
+                  </li>
+                  <li>
+                     <span class="news-date">Jul 2025</span>
+                     <span class="news-text">🏥 Joined <strong>Radiologics</strong> as a Medical Imaging and AI intern, building CT segmentation and detection pipelines.</span>
+                  </li>
+                  <li>
+                     <span class="news-date">Jun 2025</span>
+                     <span class="news-text">🎉 Graduated with a B.Sc. in Electrical and Electronics Engineering from <strong>Bilkent University</strong> (Top 15% rank, 80% Merit Scholarship).</span>
+                  </li>
+               </ul>
+            </div>
+         </section>
+
+         <!-- Publications Section -->
+         <section id="publications" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-book-bookmark"></i> Publications</h2>
+
+            <article class="pub-card">
+               <div class="pub-header">
+                  <h3 class="pub-title">
+                     <a href="https://ieeexplore.ieee.org/document/11513393" target="_blank" rel="noopener">
+                        Resource-Efficient CSI Prediction: A Gated Fusion and Factorized Projection Approach
+                     </a>
+                  </h3>
+                  <div class="pub-authors">
+                     <strong>Mohammad Hussain</strong>, Maedeh Adibag, Dilara Gurer, Gokhan Kalem, Kerim Serin, Sinem Coleri
+                  </div>
+                  <div class="pub-venue">
+                     <span class="venue-badge">IEEE Communications Letters</span>, vol. 30, pp. 1979–1983, 2026.
+                  </div>
+               </div>
+
+               <p class="pub-abstract">
+                  Accurate Channel State Information (CSI) prediction is vital for dynamic MIMO systems but computationally demanding. We propose a lightweight predictor combining a GRU encoder with Luong attention, a bottleneck gated fusion module, and a Dimension-wise Separable Linear Head (DSLH). Evaluated on 3GPP TR 38.901 channels, the model achieves <strong>−13.84 dB NMSE</strong> with <strong>26% fewer parameters</strong> and <strong>~2.3× higher inference throughput</strong> than LinFormer baselines.
+               </p>
+
+               <div class="pub-links">
+                  <a href="https://ieeexplore.ieee.org/document/11513393" target="_blank" rel="noopener" class="pub-btn ieee">
+                     <i class="fa-solid fa-file-lines" style="color: #00629b;"></i> IEEE Xplore
+                  </a>
+                  <a href="https://arxiv.org/abs/2605.06578" target="_blank" rel="noopener" class="pub-btn arxiv">
+                     <span class="arxiv-mini-tag">arXiv</span> 2605.06578
+                  </a>
+                  <a href="https://github.com/MHDoh/resource-efficient-csi-prediction" target="_blank" rel="noopener" class="pub-btn code">
+                     <i class="fa-brands fa-github"></i> Code Repository
+                  </a>
+                  <button onclick="toggleBibtex('bib-csi2026')" class="pub-btn bibtex">
+                     <i class="fa-solid fa-quote-right"></i> BibTeX
+                  </button>
+               </div>
+
+               <div id="bib-csi2026" class="bibtex-block" style="display: none;">
+<pre><code>@article{hussain2026resource,
+  title     = {Resource-Efficient {CSI} Prediction: A Gated Fusion and Factorized Projection Approach},
+  author    = {Hussain, Mohammad and Adibag, Maedeh and Gurer, Dilara and Kalem, Gokhan and Serin, Kerim and Coleri, Sinem},
+  journal   = {IEEE Communications Letters},
+  volume    = {30},
+  pages     = {1979--1983},
+  year      = {2026},
+  doi       = {10.1109/LCOMM.2026.3691476}
+}</code></pre>
+               </div>
+            </article>
+         </section>
+
+         <!-- Projects Section -->
+         <section id="projects" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Research & Engineering Projects</h2>
+
+            <div class="projects-grid">
+               <!-- Project 1: CSI Prediction Repo -->
+               <div class="project-card featured">
+                  <div class="project-header">
+                     <span class="project-tag">Featured · Research</span>
+                     <div class="project-actions">
+                        <a href="https://github.com/MHDoh/resource-efficient-csi-prediction" target="_blank" rel="noopener" title="GitHub Repo">
+                           <i class="fa-brands fa-github"></i>
+                        </a>
+                     </div>
+                  </div>
+                  <h3>Resource-Efficient CSI Prediction Benchmark</h3>
+                  <p>
+                     PyTorch implementation of the GRU-Attn-DSLH framework and multiple baseline architectures (LinFormer, Vanilla LSTM, Vanilla GRU) for 2×2 MIMO channel state prediction with complete QuaDRiGa 3GPP TR 38.901 dataset generation scripts.
+                  </p>
+                  <div class="tech-tags">
+                     <span>PyTorch</span>
+                     <span>MATLAB</span>
+                     <span>QuaDRiGa</span>
+                     <span>3GPP TR 38.901</span>
+                     <span>MIMO</span>
+                  </div>
+               </div>
+
+               <!-- Project 2: Edge Vision & Sensor Monitoring Platform -->
+               <div class="project-card">
+                  <div class="project-header">
+                     <span class="project-tag">Bilkent FYP · Industry: KAREL</span>
+                     <div class="project-actions">
+                        <a href="https://github.com/MHDoh/FYP" target="_blank" rel="noopener" title="GitHub Repo">
+                           <i class="fa-brands fa-github"></i>
+                        </a>
+                     </div>
+                  </div>
+                  <h3>Edge Vision & Real-Time Sensor Monitoring Platform</h3>
+                  <p>
+                     Built a multi-channel analytics system deployable on NVIDIA Jetson or standard hardware, integrating five task-specific vision models (PyTorch, YOLO, OpenCV) behind a PyQt5 operator interface. Designed a UART ingestion pipeline for CO₂, temperature, humidity, pressure, and acceleration streams with configurable thresholds and consecutive-anomaly detection, plus a Flask and Socket.IO data layer streaming live metrics between edge devices, a web dashboard, and a desktop client.
+                  </p>
+                  <div class="tech-tags">
+                     <span>NVIDIA Jetson</span>
+                     <span>YOLO</span>
+                     <span>OpenCV</span>
+                     <span>PyQt5</span>
+                     <span>Flask / Socket.IO</span>
+                  </div>
+               </div>
+
+               <!-- Project 3: Legged Locomotion Research -->
+               <div class="project-card">
+                  <div class="project-header">
+                     <span class="project-tag">Robotics & ML</span>
+                  </div>
+                  <h3>Neural Networks for Legged Locomotion</h3>
+                  <p>
+                     Individual research with Prof. Omer Morgül on modeling SLIP/TDSLIP dynamical systems. Analyzed variable interactions via custom phase-space visualizations and benchmarked GPR, SVM, and deep neural nets for apex prediction.
+                  </p>
+                  <div class="tech-tags">
+                     <span>MATLAB</span>
+                     <span>Deep Learning</span>
+                     <span>Gaussian Processes</span>
+                     <span>Nonlinear Dynamics</span>
+                  </div>
+               </div>
+
+               <!-- Project 4: DSP & Scalar Quantization -->
+               <div class="project-card">
+                  <div class="project-header">
+                     <span class="project-tag">Signal Processing</span>
+                  </div>
+                  <h3>Uniform & Non-Uniform Scalar Quantization</h3>
+                  <p>
+                     Implemented Lloyd-Max companders and non-uniform scalar quantization routines in MATLAB for grayscale image compression and signal fidelity optimization.
+                  </p>
+                  <div class="tech-tags">
+                     <span>DSP</span>
+                     <span>Lloyd-Max</span>
+                     <span>MATLAB</span>
+                     <span>Image Compression</span>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Education Section -->
+         <section id="education" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+
+            <div class="timeline">
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                     <div class="timeline-header">
+                        <h3>Koç University</h3>
+                        <span class="timeline-date">Oct 2025 – Present</span>
+                     </div>
+                     <p class="timeline-degree"><strong>Master of Science in Electrical and Electronics Engineering</strong></p>
+                     <p class="timeline-details">
+                        GPA: <strong>3.57 / 4.00</strong> · Wireless Networks Laboratory · Advisor: <strong>Prof. Sinem Coleri</strong><br>
+                        Focus: Safe & uncertainty-aware RL, conformal prediction, resource-efficient deep learning for wireless communications and O-RAN.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                     <div class="timeline-header">
+                        <h3>Bilkent University</h3>
+                        <span class="timeline-date">Graduated Jun 2025</span>
+                     </div>
+                     <p class="timeline-degree"><strong>Bachelor of Science in Electrical and Electronics Engineering</strong></p>
+                     <p class="timeline-details">
+                        GPA: <strong>3.27 / 4.00</strong> · Class Ranking: <strong>Top 15%</strong><br>
+                        Honors: <strong>80% Merit Scholarship</strong> throughout entire undergraduate studies.<br>
+                        Core coursework: Digital Signal Processing, Telecommunications, Linear System Theory, Machine Learning, Embedded Systems.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Experience Section -->
+         <section id="experience" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+
+            <div class="timeline">
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                     <div class="timeline-header">
+                        <h3>Graduate Research Assistant · Koç University</h3>
+                        <span class="timeline-date">Oct 2025 – Present</span>
+                     </div>
+                     <p class="timeline-role">Wireless Networks Laboratory · Advisor: Prof. Sinem Coleri</p>
+                     <ul>
+                        <li>Developing AI-driven O-RAN resource-allocation systems with Turkcell and Opticoms, using 3GPP TR 38.901 and QuaDRiGa channel data for model training and evaluation across LOS, NLOS, and mixed-condition scenarios.</li>
+                        <li>Designed a GRU encoder with attention, gated feature fusion, and a factorized projection head, reducing parameters by <strong>26%</strong> and increasing inference throughput by <strong>2.3×</strong> over LinFormer while achieving <strong>&minus;13.84 dB NMSE</strong>.</li>
+                        <li>Building a hierarchical scheduling pipeline combining learned surrogate models, conformal demand bounds, convex optimization, and calibrated execution-time safety checks for latency-sensitive URLLC/eMBB workloads.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                     <div class="timeline-header">
+                        <h3>Medical Imaging and AI Intern · Radiologics</h3>
+                        <span class="timeline-date">Jul 2025 – Oct 2025</span>
+                     </div>
+                     <ul>
+                        <li>Built CT processing and nnU-Net v2 segmentation pipelines for <strong>44 anatomical structures</strong>, from DICOM conversion through geometry-preserving export.</li>
+                        <li>Developed skeletal-muscle segmentation workflows for 90 L3-centered CT volumes with tissue- and bone-aware mask reconstruction.</li>
+                        <li>Trained YOLOX detectors on <strong>50K</strong> pediatric radiographs, improving recall by <strong>5–10 points</strong> with domain-robust augmentations.</li>
+                        <li>Built a QCT bone-density pipeline for artifact removal and HU-to-BMD calibration using Deming regression and Bland–Altman analysis.</li>
+                        <li>Automated rotated bounding boxes for 21 anatomical regions, optimizing 30+ geometric parameters over 300+ Optuna trials per rule.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                     <div class="timeline-header">
+                        <h3>ML / Embedded Systems Intern · Modern Technology Laboratories</h3>
+                        <span class="timeline-date">Aug 2024 – Sep 2024</span>
+                     </div>
+                     <ul>
+                        <li>Deployed a lightweight CNN inference pipeline on an ESP32 for resource-constrained structural crack detection.</li>
+                        <li>Built PyTorch regression workflows for concrete-strength prediction, including preprocessing, training, and holdout evaluation.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                     <div class="timeline-header">
+                        <h3>Trainee Engineer · Nanomagnetic Instruments</h3>
+                        <span class="timeline-date">Jun 2023 – Sep 2023</span>
+                     </div>
+                     <ul>
+                        <li>Configured AK4495 DACs and verified multi-channel ADC/DAC printed circuit boards.</li>
+                        <li>Implemented I²S communication between Raspberry Pi Pico and FPGA boards for low-noise audio waveform synthesis.</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Skills Section -->
+         <section id="skills" class="section">
+            <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Toolkit</h2>
+
+            <div class="skills-grid">
+               <div class="skill-category">
+                  <h4><i class="fa-solid fa-brain"></i> Machine Learning & AI</h4>
+                  <p>PyTorch, TensorFlow, Scikit-Learn, NumPy, SciPy, Matplotlib, Pandas, Hugging Face, RAG systems, Reinforcement Learning, Transformers, GRU/LSTM, Weights & Biases</p>
+               </div>
+
+               <div class="skill-category">
+                  <h4><i class="fa-solid fa-tower-cell"></i> Wireless & Simulation</h4>
+                  <p>QuaDRiGa Channel Modeling, 3GPP TR 38.901, MATLAB Wireless Toolbox, MIMO Simulation, 5G EVB</p>
+               </div>
+
+               <div class="skill-category">
+                  <h4><i class="fa-solid fa-notes-medical"></i> Edge, Vision & Medical Imaging</h4>
+                  <p>NVIDIA Jetson, ESP32, TensorFlow Lite, OpenCV, DICOM Processing, SimpleITK, YOLOX, Flask, Socket.IO</p>
+               </div>
+
+               <div class="skill-category">
+                  <h4><i class="fa-solid fa-terminal"></i> Programming & Hardware</h4>
+                  <p>Python, C/C++, SQL, MATLAB, VHDL, Bash, LaTeX, Raspberry Pi, FPGA (Basys 3), Git, Linux</p>
+               </div>
+            </div>
+         </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+         <p>© 2026 Mohammad Hussain · Istanbul, Türkiye</p>
+         <p class="footer-sub">Academic portfolio & research homepage.</p>
+      </footer>
+
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+﻿% VERSION 7: stable alignment for all dates/GPAs; KAREL restored to project subtitle
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[top=0.45in,bottom=0.45in,left=0.55in,right=0.55in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parfillskip}{0pt plus 1fil}
+
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+% A single reusable two-column header keeps every right-side field
+% flush with the same page margin in both pdfLaTeX and Overleaf.
+\newcommand{\resumeentry}[4]{%
+  \noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & #4
+  \end{tabular*}\par%
+}
+
+\newcommand{\educationentry}[4]{%
+  \noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & #4
+  \end{tabular*}\par%
+}
+
+\newcommand{\projectentry}[3]{%
+  \noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr@{}}
+    \textbf{#1} & #2 \\
+    \multicolumn{2}{@{}l@{}}{\textit{#3}}
+  \end{tabular*}\par%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\LARGE\textbf{Mohammad Hussain}} \\[2pt]
+    Istanbul, Turkey
+  $\mid$ \href{mailto:hussainm13579@gmail.com}{hussainm13579@gmail.com}
+  $\mid$ +90 552 839 3308 \\
+  \href{https://github.com/MHDoh}{github.com/MHDoh}
+  $\mid$
+  \href{https://www.linkedin.com/in/mohammad-hussain1/}
+       {linkedin.com/in/mohammad-hussain1}
+\end{center}
+
+\section*{Summary}
+ML researcher and engineer experienced in building data ingestion, validation,
+training, and evaluation workflows for large imaging and simulation datasets.
+Developed real-time sensor-streaming systems, edge inference pipelines for
+NVIDIA Jetson and ESP32, and parameter-efficient neural architectures with
+measured throughput gains. 
+
+\section*{Technical Skills}
+\textbf{Programming \& Systems:} Python, C++, SQL, MATLAB, Linux \\
+\textbf{Data Infrastructure:} Data ingestion and validation, dataset merging,
+ETL-style pipelines, experiment and evaluation workflows, DICOM processing,
+real-time sensor streaming \\
+\textbf{ML \& Retrieval:} PyTorch, TensorFlow, Scikit-learn, Hugging Face,
+RAG systems, reinforcement learning, Transformers, GRU/LSTM \\
+\textbf{Edge \& Vision:} NVIDIA Jetson, ESP32, TensorFlow Lite, OpenCV,
+SimpleITK, YOLOX, Flask, Socket.IO
+
+\section*{Experience}
+
+\resumeentry
+  {Ko\c{c} University -- Wireless Networks Laboratory}
+  {Istanbul, Turkey}
+  {Graduate Research Assistant, Advisor: Prof. Sinem Coleri}
+  {Oct 2025 -- Present}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
+  \item Developing AI-driven O-RAN resource-allocation systems with Turkcell
+        and Opticoms, using 3GPP TR~38.901 and QuaDRiGa channel data for model
+        training and evaluation across LOS, NLOS, and mixed-condition scenarios.
+  \item Designed a GRU encoder with attention, gated feature fusion, and a
+        factorized projection head, reducing parameters by \textbf{26\%} and
+        increasing inference throughput by \textbf{2.3$\times$} over LinFormer
+        while achieving $-13.84$\,dB NMSE.
+  \item Building a hierarchical scheduling pipeline combining learned surrogate
+        models, conformal demand bounds, convex optimization, and calibrated
+        execution-time safety checks for latency-sensitive URLLC/eMBB workloads.
+\end{itemize}
+
+\vspace{2pt}
+
+
+
+\resumeentry
+  {Radiologics}
+  {Remote}
+  {Medical Imaging and AI Intern}
+  {Jul 2025 -- Oct 2025}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
+  \item Built CT processing and nnU-Net v2 segmentation pipelines for
+        \textbf{44 anatomical structures}, from DICOM conversion through
+        geometry-preserving export.
+  \item Developed skeletal-muscle segmentation workflows for 90 L3-centered
+        CT volumes with tissue- and bone-aware mask reconstruction.
+  \item Trained YOLOX detectors on \textbf{50K} pediatric radiographs,
+        improving recall by \textbf{5--10 points} with domain-robust augmentations.
+  \item Built a QCT bone-density pipeline for artifact removal and
+        HU-to-BMD calibration using Deming regression and Bland--Altman analysis.
+  \item Automated rotated bounding boxes for 21 anatomical regions, optimizing
+        30+ geometric parameters over 300+ Optuna trials per rule.
+\end{itemize}
+
+\vspace{2pt}
+\resumeentry
+  {Modern Technology Laboratories}
+  {Jeddah, Saudi Arabia}
+  {ML / Embedded Systems Intern}
+  {Aug 2024 -- Sep 2024}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
+  \item Deployed a lightweight CNN inference pipeline on an ESP32 for
+        resource-constrained structural crack detection.
+  \item Built PyTorch regression workflows for concrete-strength prediction,
+        including preprocessing, training, and holdout evaluation.
+\end{itemize}
+
+\section*{Selected Systems Project}
+
+\projectentry
+  {Edge Vision \& Real-Time Sensor Monitoring Platform}
+  {Bilkent University FYP}
+  {Industry Collaboration: KAREL \textbar{} \href{https://github.com/MHDoh/FYP}{github.com/MHDoh/FYP}}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
+  \item Built a multi-channel analytics system deployable on NVIDIA Jetson or
+        standard hardware, integrating five task-specific vision models with
+        PyTorch, YOLO, OpenCV, and a PyQt5 operator interface.
+  \item Designed a UART ingestion and processing pipeline for CO$_2$,
+        temperature, humidity, pressure, and acceleration streams, including
+        configurable thresholds and consecutive-anomaly detection.
+  \item Implemented a Flask and Socket.IO data layer that streamed live metrics,
+        anomaly records, and configuration updates between edge devices, a web
+        dashboard, and a desktop client.
+\end{itemize}
+
+\section*{Publication}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
+  \item \textbf{M. Hussain}, M. Adibag, D. Gurer, G. Kalem, K. Serin,
+        and S. Coleri, ``Resource-Efficient CSI Prediction: A Gated Fusion
+        and Factorized Projection Approach,'' \textit{IEEE Communications
+        Letters}, 2026.
+\end{itemize}
+
+\section*{Education}
+
+\educationentry
+  {Ko\c{c} University}
+  {Oct 2025 -- Present}
+  {M.Sc. in Electrical and Electronics Engineering}
+  {GPA: 3.57 / 4.00}
+
+\vspace{2pt}
+\educationentry
+  {Bilkent University}
+  {Jun 2025}
+  {B.Sc. in Electrical and Electronics Engineering}
+  {GPA: 3.27 / 4.00}
+
+\end{document}
+
