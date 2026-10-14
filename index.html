@@ -195,7 +195,7 @@
                   I am a Master's researcher in Electrical and Electronics Engineering at <strong>Koç University</strong> (Istanbul, Türkiye), working in the Wireless Networks Laboratory under the supervision of <strong>Prof. Sinem Coleri</strong>.
                </p>
                <p>
-                  My research lies at the intersection of <strong>Uncertainty-Aware Machine Learning</strong>, <strong>Safe Reinforcement Learning</strong>, and <strong>Next-Generation Wireless Communications (5G-Advanced / 6G & O-RAN)</strong>. I am particularly interested in developing theoretical and algorithmic frameworks—combining deep reinforcement learning, online conformal prediction, risk-sensitive optimization (CVaR), and deterministic safety shields—that provide provable reliability and extreme energy/computational efficiency for ultra-low-latency and broadband slicing. My current work is done in collaboration with Turkcell and Opticoms on AI-driven O-RAN resource allocation.
+                  My research lies at the intersection of <strong>Uncertainty-Aware Machine Learning</strong>, <strong>Safe Reinforcement Learning</strong>, and <strong>Next-Generation Wireless Communications (5G-Advanced / 6G & O-RAN)</strong>. I work on resource allocation methods that combine deep reinforcement learning, conformal prediction, risk-sensitive objectives (CVaR), and execution-time safety layers, so that learned controllers keep their service guarantees under traffic and channel uncertainty. My current work is part of the TÜBİTAK 1711 AI-P5G project with Turkcell and Opticoms, which also includes applied work on AI-assisted control of a private 5G network at a factory site.
                </p>
                <p>
                   Between my B.Sc. and M.Sc., I worked as a Medical Imaging and AI intern at <strong>Radiologics</strong>, building CT segmentation and detection pipelines for pediatric and skeletal imaging.
@@ -306,6 +306,20 @@
   year      = {2026},
   doi       = {10.1109/LCOMM.2026.3691476}
 }</code></pre>
+               </div>
+            </article>
+
+            <article class="pub-card">
+               <div class="pub-header">
+                  <h3 class="pub-title">
+                     Risk-Aware Safe Hierarchical Learning for Robust eMBB–URLLC Resource Allocation in O-RAN
+                  </h3>
+                  <div class="pub-authors">
+                     <strong>Mohammad Hussain</strong>, Dilara Gurer, Gokhan Kalem, Sinem Coleri
+                  </div>
+                  <div class="pub-venue">
+                     Manuscript in preparation for <em>IEEE Transactions on Wireless Communications</em>.
+                  </div>
                </div>
             </article>
          </section>
@@ -430,7 +444,7 @@
                   <div class="timeline-content">
                      <div class="timeline-header">
                         <h3>Koç University</h3>
-                        <span class="timeline-date">Oct 2025 – Present</span>
+                        <span class="timeline-date">Sep 2025 – Jul 2027 (expected)</span>
                      </div>
                      <p class="timeline-degree"><strong>Master of Science in Electrical and Electronics Engineering</strong></p>
                      <p class="timeline-details">
@@ -451,7 +465,7 @@
                      <p class="timeline-details">
                         GPA: <strong>3.27 / 4.00</strong> · Class Ranking: <strong>Top 15%</strong><br>
                         Honors: <strong>80% Merit Scholarship</strong> throughout entire undergraduate studies.<br>
-                        Core coursework: Digital Signal Processing, Telecommunications, Linear System Theory, Machine Learning, Embedded Systems.
+                        Core coursework: Digital Signal Processing, Digital Communications, Advanced Digital Communications, Neural Networks, Feedback Control Systems, Probability and Statistics.
                      </p>
                   </div>
                </div>
@@ -472,9 +486,9 @@
                      </div>
                      <p class="timeline-role">Wireless Networks Laboratory · Advisor: Prof. Sinem Coleri</p>
                      <ul>
-                        <li>Developing AI-driven O-RAN resource-allocation systems with Turkcell and Opticoms, using 3GPP TR 38.901 and QuaDRiGa channel data for model training and evaluation across LOS, NLOS, and mixed-condition scenarios.</li>
-                        <li>Designed a GRU encoder with attention, gated feature fusion, and a factorized projection head, reducing parameters by <strong>26%</strong> and increasing inference throughput by <strong>2.3×</strong> over LinFormer while achieving <strong>&minus;13.84 dB NMSE</strong>.</li>
-                        <li>Building a hierarchical scheduling pipeline combining learned surrogate models, conformal demand bounds, convex optimization, and calibrated execution-time safety checks for latency-sensitive URLLC/eMBB workloads.</li>
+                        <li><strong>Safe hierarchical RL for O-RAN</strong> (manuscript in preparation): three PPO agents on two O-RAN timescales set slice PRB/power budgets and schedule URLLC and eMBB users, with an execution-time safety layer built on conformal demand bounds and conservative channel-rate bounds.</li>
+                        <li><strong>Lightweight CSI prediction</strong> (IEEE Communications Letters): GRU encoder with attention, gated feature fusion, and a factorized projection head, reducing parameters by <strong>26%</strong> and increasing inference throughput by <strong>2.3×</strong> over LinFormer while achieving <strong>&minus;13.84 dB NMSE</strong>.</li>
+                        <li><strong>Applied private-5G control</strong> (TÜBİTAK 1711 AI-P5G project with Turkcell and Opticoms): developed a controller package for a commercial gNB at a factory site that lowers configured transmit power while protecting device connectivity and cell service, with a digital twin for comparing policies against fixed and rule-based baselines. Evaluated offline and prepared for factory integration.</li>
                      </ul>
                   </div>
                </div>

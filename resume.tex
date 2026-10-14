@@ -1,177 +1,112 @@
-﻿% VERSION 7: stable alignment for all dates/GPAs; KAREL restored to project subtitle
-\documentclass[a4paper,10pt]{article}
-
-\usepackage[top=0.45in,bottom=0.45in,left=0.55in,right=0.55in]{geometry}
-\usepackage[parfill]{parskip}
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{XCharter}
+\usepackage[top=1.3cm,bottom=1.2cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{microtype}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
-\usepackage{tabularx}
-\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks,urlcolor=MidnightBlue,linkcolor=MidnightBlue,
+  pdftitle={Mohammad Hussain - CV},pdfauthor={Mohammad Hussain}]{hyperref}
 
+\definecolor{rulegray}{gray}{0.55}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlength{\parfillskip}{0pt plus 1fil}
+\pagestyle{empty}
 
-\titleformat{\section}
-  {\large\bfseries\uppercase}
-  {}
-  {0em}
-  {}
-  [\titlerule]
+\titleformat{\section}{\normalsize\bfseries\scshape}{}{0pt}{}[\vspace{-0.75em}{\color{rulegray}\rule{\linewidth}{0.4pt}}]
+\titlespacing*{\section}{0pt}{5pt}{2pt}
 
-\titlespacing{\section}{0pt}{6pt}{3pt}
+\setlist[itemize]{leftmargin=1.1em,label=\textbullet,nosep,topsep=1pt,itemsep=1pt}
 
-% A single reusable two-column header keeps every right-side field
-% flush with the same page margin in both pdfLaTeX and Overleaf.
-\newcommand{\resumeentry}[4]{%
-  \noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr@{}}
+% \entry{left bold}{right}{left italic}{right italic}
+\newcommand{\entry}[4]{%
+  \noindent\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & #2 \\
-    \textit{#3} & #4
-  \end{tabular*}\par%
-}
-
-\newcommand{\educationentry}[4]{%
-  \noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr@{}}
-    \textbf{#1} & #2 \\
-    \textit{#3} & #4
-  \end{tabular*}\par%
-}
-
-\newcommand{\projectentry}[3]{%
-  \noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr@{}}
-    \textbf{#1} & #2 \\
-    \multicolumn{2}{@{}l@{}}{\textit{#3}}
-  \end{tabular*}\par%
-}
+    \textit{#3} & \textit{#4}
+  \end{tabular*}\par}
 
 \begin{document}
-\thispagestyle{empty}
 
 \begin{center}
-  {\LARGE\textbf{Mohammad Hussain}} \\[2pt]
-    Istanbul, Turkey
-  $\mid$ \href{mailto:hussainm13579@gmail.com}{hussainm13579@gmail.com}
-  $\mid$ +90 552 839 3308 \\
-  \href{https://github.com/MHDoh}{github.com/MHDoh}
-  $\mid$
-  \href{https://www.linkedin.com/in/mohammad-hussain1/}
-       {linkedin.com/in/mohammad-hussain1}
+  {\LARGE\bfseries Mohammad Hussain}\\[3pt]
+  Istanbul, Türkiye \,·\, \href{mailto:mohussain25@ku.edu.tr}{mohussain25@ku.edu.tr} \,·\, +90 552 839 3308\\[1pt]
+  \href{https://mhdoh.github.io}{mhdoh.github.io} \,·\, \href{https://github.com/MHDoh}{github.com/MHDoh} \,·\,
+  \href{https://orcid.org/0009-0004-1547-3027}{ORCID 0009-0004-1547-3027} \,·\,
+  \href{https://www.linkedin.com/in/mohammad-hussain1/}{linkedin.com/in/mohammad-hussain1}
 \end{center}
 
-\section*{Summary}
-ML researcher and engineer experienced in building data ingestion, validation,
-training, and evaluation workflows for large imaging and simulation datasets.
-Developed real-time sensor-streaming systems, edge inference pipelines for
-NVIDIA Jetson and ESP32, and parameter-efficient neural architectures with
-measured throughput gains. 
+\section{Research Interests}
+Machine learning for wireless networks: safe and risk-aware reinforcement learning, multi-timescale O-RAN control,
+uncertainty quantification for resource allocation, and resource-efficient models for the physical layer.
 
-\section*{Technical Skills}
-\textbf{Programming \& Systems:} Python, C++, SQL, MATLAB, Linux \\
-\textbf{Data Infrastructure:} Data ingestion and validation, dataset merging,
-ETL-style pipelines, experiment and evaluation workflows, DICOM processing,
-real-time sensor streaming \\
-\textbf{ML \& Retrieval:} PyTorch, TensorFlow, Scikit-learn, Hugging Face,
-RAG systems, reinforcement learning, Transformers, GRU/LSTM \\
-\textbf{Edge \& Vision:} NVIDIA Jetson, ESP32, TensorFlow Lite, OpenCV,
-SimpleITK, YOLOX, Flask, Socket.IO
+\section{Education}
+\entry{Koç University, Istanbul}{Sep 2025 -- Jul 2027 (expected)}
+      {M.Sc.\ in Electrical and Electronics Engineering (thesis); advisor: Prof.\ Sinem Coleri}{GPA 3.57/4.00}
+\vspace{1pt}
+{\small Coursework: Wireless Communications, Communication Networks, Optimization, Reinforcement Learning (ongoing)}
+\vspace{3pt}
 
-\section*{Experience}
+\entry{Bilkent University, Ankara}{Sep 2021 -- Jun 2025}
+      {B.Sc.\ in Electrical and Electronics Engineering; 80\% merit scholarship}{CGPA 3.27/4.00}
 
-\resumeentry
-  {Ko\c{c} University -- Wireless Networks Laboratory}
-  {Istanbul, Turkey}
-  {Graduate Research Assistant, Advisor: Prof. Sinem Coleri}
-  {Oct 2025 -- Present}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
-  \item Developing AI-driven O-RAN resource-allocation systems with Turkcell
-        and Opticoms, using 3GPP TR~38.901 and QuaDRiGa channel data for model
-        training and evaluation across LOS, NLOS, and mixed-condition scenarios.
-  \item Designed a GRU encoder with attention, gated feature fusion, and a
-        factorized projection head, reducing parameters by \textbf{26\%} and
-        increasing inference throughput by \textbf{2.3$\times$} over LinFormer
-        while achieving $-13.84$\,dB NMSE.
-  \item Building a hierarchical scheduling pipeline combining learned surrogate
-        models, conformal demand bounds, convex optimization, and calibrated
-        execution-time safety checks for latency-sensitive URLLC/eMBB workloads.
+\section{Publications}
+\begin{itemize}[leftmargin=2.1em,label={}]
+  \item[{[J1]}] \textbf{M.~Hussain}, M.~Adibag, D.~Gurer, G.~Kalem, K.~Serin, and S.~Coleri, ``Resource-Efficient CSI Prediction:
+        A Gated Fusion and Factorized Projection Approach,'' \textit{IEEE Communications Letters}, vol.~30, pp.~1979--1983, 2026.
+        \href{https://doi.org/10.1109/LCOMM.2026.3691476}{[DOI]}
+        \href{https://arxiv.org/abs/2605.06578}{[arXiv]}
+        \href{https://github.com/MHDoh/resource-efficient-csi-prediction}{[code]}
+  \item[{[M1]}] \textbf{M.~Hussain}, D.~Gurer, G.~Kalem, and S.~Coleri, ``Risk-Aware Safe Hierarchical Learning for Robust
+        eMBB--URLLC Resource Allocation in O-RAN,'' manuscript in preparation for \textit{IEEE Transactions on Wireless Communications}.
 \end{itemize}
 
-\vspace{2pt}
-
-
-
-\resumeentry
-  {Radiologics}
-  {Remote}
-  {Medical Imaging and AI Intern}
-  {Jul 2025 -- Oct 2025}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
-  \item Built CT processing and nnU-Net v2 segmentation pipelines for
-        \textbf{44 anatomical structures}, from DICOM conversion through
-        geometry-preserving export.
-  \item Developed skeletal-muscle segmentation workflows for 90 L3-centered
-        CT volumes with tissue- and bone-aware mask reconstruction.
-  \item Trained YOLOX detectors on \textbf{50K} pediatric radiographs,
-        improving recall by \textbf{5--10 points} with domain-robust augmentations.
-  \item Built a QCT bone-density pipeline for artifact removal and
-        HU-to-BMD calibration using Deming regression and Bland--Altman analysis.
-  \item Automated rotated bounding boxes for 21 anatomical regions, optimizing
-        30+ geometric parameters over 300+ Optuna trials per rule.
+\section{Research Experience}
+\entry{Wireless Networks Laboratory, Koç University}{Istanbul, Türkiye}
+      {Graduate Research Assistant, TÜBİTAK 1711 AI-P5G project with Turkcell and Opticoms}{Oct 2025 -- Present}
+\begin{itemize}
+  \item \textbf{Safe hierarchical RL for O-RAN [M1].} Three PPO agents on two O-RAN timescales set slice PRB/power budgets
+        and schedule URLLC and eMBB users; an execution-time safety layer built on conformal demand bounds and conservative
+        channel-rate bounds corrects allocations before they are applied. Versus fixed schedulers: 61\% fewer URLLC deadline
+        misses; worst-user eMBB rate raised from 1.95 to 2.49\,Mbps.
+  \item \textbf{Lightweight CSI prediction [J1].} GRU encoder with Luong attention, gated fusion, and a factorized output head;
+        26\% fewer parameters and $2.3\times$ the throughput of LinFormer at $-13.84$\,dB NMSE on
+        3GPP TR~38.901 channels.
+  \item \textbf{Applied private-5G control (factory site, Ankara).} Developed a controller package for the project's commercial
+        LiteOn FlexFi gNB that lowers configured transmit power while protecting device connectivity and cell service: a data
+        pipeline over DU statistics, PM counters, and walk-test logs; a guarded neural power selector with NETCONF actuation;
+        and a digital twin that replays recorded walks to compare policies with fixed and rule-based baselines.
+        Evaluated offline and prepared for factory integration.
 \end{itemize}
 
-\vspace{2pt}
-\resumeentry
-  {Modern Technology Laboratories}
-  {Jeddah, Saudi Arabia}
-  {ML / Embedded Systems Intern}
-  {Aug 2024 -- Sep 2024}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
-  \item Deployed a lightweight CNN inference pipeline on an ESP32 for
-        resource-constrained structural crack detection.
-  \item Built PyTorch regression workflows for concrete-strength prediction,
-        including preprocessing, training, and holdout evaluation.
+\section{Industry Experience}
+\entry{Radiologics}{Remote}{Medical Imaging and AI Intern}{Jul 2025 -- Oct 2025}
+\begin{itemize}
+  \item Built CT segmentation pipelines with nnU-Net v2 for 44 anatomical structures, from DICOM conversion to
+        geometry-preserving export, and L3-centered skeletal-muscle segmentation workflows.
+  \item Trained YOLOX detectors on 50K pediatric radiographs (recall +5--10 points); built a QCT bone-density pipeline with
+        HU-to-BMD calibration validated by Deming regression and Bland--Altman analysis.
+\end{itemize}
+\vspace{3pt}
+\entry{Modern Technology Laboratories}{Jeddah, Saudi Arabia}{ML / Embedded Systems Intern}{Aug 2024 -- Sep 2024}
+\begin{itemize}
+  \item Deployed a lightweight CNN for crack detection on an ESP32; built PyTorch models for concrete-strength prediction.
 \end{itemize}
 
-\section*{Selected Systems Project}
-
-\projectentry
-  {Edge Vision \& Real-Time Sensor Monitoring Platform}
-  {Bilkent University FYP}
-  {Industry Collaboration: KAREL \textbar{} \href{https://github.com/MHDoh/FYP}{github.com/MHDoh/FYP}}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
-  \item Built a multi-channel analytics system deployable on NVIDIA Jetson or
-        standard hardware, integrating five task-specific vision models with
-        PyTorch, YOLO, OpenCV, and a PyQt5 operator interface.
-  \item Designed a UART ingestion and processing pipeline for CO$_2$,
-        temperature, humidity, pressure, and acceleration streams, including
-        configurable thresholds and consecutive-anomaly detection.
-  \item Implemented a Flask and Socket.IO data layer that streamed live metrics,
-        anomaly records, and configuration updates between edge devices, a web
-        dashboard, and a desktop client.
+\section{Selected Project}
+\entry{Edge vision and sensor-monitoring platform}{\href{https://github.com/MHDoh/FYP}{github.com/MHDoh/FYP}}
+      {B.Sc.\ senior design project, Bilkent University, in collaboration with KAREL}{}
+\begin{itemize}
+  \item Five task-specific vision models on NVIDIA Jetson with a PyQt5 operator interface; UART ingestion of CO$_2$,
+        temperature, humidity, pressure, and acceleration streams with anomaly detection; Flask/Socket.IO live dashboard.
 \end{itemize}
 
-\section*{Publication}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt,parsep=0pt]
-  \item \textbf{M. Hussain}, M. Adibag, D. Gurer, G. Kalem, K. Serin,
-        and S. Coleri, ``Resource-Efficient CSI Prediction: A Gated Fusion
-        and Factorized Projection Approach,'' \textit{IEEE Communications
-        Letters}, 2026.
-\end{itemize}
-
-\section*{Education}
-
-\educationentry
-  {Ko\c{c} University}
-  {Oct 2025 -- Present}
-  {M.Sc. in Electrical and Electronics Engineering}
-  {GPA: 3.57 / 4.00}
-
-\vspace{2pt}
-\educationentry
-  {Bilkent University}
-  {Jun 2025}
-  {B.Sc. in Electrical and Electronics Engineering}
-  {GPA: 3.27 / 4.00}
+\section{Skills}
+\textbf{Programming:} Python, C++, MATLAB, SQL, Bash, Git, Linux, Docker, LaTeX\\
+\textbf{ML:} PyTorch, TensorFlow; PPO, safe/hierarchical RL, conformal prediction, CVaR; GRU/LSTM, Transformers\\
+\textbf{Wireless:} O-RAN (non-RT/near-RT RIC), 5G SA, NETCONF, QuaDRiGa, 3GPP TR 38.901 channel models\\
+\textbf{Edge and imaging:} NVIDIA Jetson, ESP32, TensorFlow Lite, OpenCV, YOLOX, nnU-Net, SimpleITK\\
+\textbf{Languages:} English, TOEFL iBT 114/120 (R30, L30, S26, W28; May 2025)
 
 \end{document}
-
